@@ -41,7 +41,12 @@ export default function ReportTable({ codeContents }) {
 						],
 					}
 				);
-				rData.push({ ...data, filename: codeData.filename });
+				rData.push({
+					...data,
+					filename: codeData.filename,
+					content: codeData.content,
+					time: new Date().toUTCString(),
+				});
 			} catch (e) {}
 		}
 		setreportData(rData);

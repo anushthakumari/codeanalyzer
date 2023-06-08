@@ -19,6 +19,8 @@ export default function ReportViewDialog() {
 	const version = searchparams.get("version");
 	const err = searchparams.get("err");
 	const out = searchparams.get("out");
+	const code = searchparams.get("code");
+	const time = searchparams.get("time");
 
 	const data = {
 		filename,
@@ -26,6 +28,8 @@ export default function ReportViewDialog() {
 		err,
 		version,
 		out,
+		code,
+		time,
 	};
 
 	console.log(data);

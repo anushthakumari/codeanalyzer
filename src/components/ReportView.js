@@ -37,9 +37,16 @@ const ReportView = ({ data }) => (
 		<Page size="A4" style={styles.page}>
 			<View style={styles.section}>
 				<Text style={styles.filenameStyle}>Filename: {data.filename}</Text>
-				<Text style={data.err ? styles.fail : styles.success}>
-					Result: {data.err ? "Execution failed!!" : "Successfully Executed!"}{" "}
+				<Text>Time: {data.time}</Text>
+				<Text
+					style={[styles.marginTop5, data.err ? styles.fail : styles.success]}>
+					Result: {data.err ? "Execution failed!!" : "Successfully Executed!"}
 				</Text>
+
+				<View style={styles.marginTop5}>
+					<Text>Code: </Text>
+					<Text>{data.code}</Text>
+				</View>
 
 				{data.err ? (
 					<View style={styles.marginTop5}>

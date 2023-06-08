@@ -40,7 +40,6 @@ const Content = () => {
 					version: currentSelectedLang.version,
 				},
 			]);
-			setcurrentSelectedLang({});
 		}
 	};
 

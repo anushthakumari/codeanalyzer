@@ -42,7 +42,7 @@ export default function Output(props) {
 								<Button
 									onClick={() => {
 										const uri = encodeURI(
-											`/report?filename=${row.filename}&lang=${row.language}&version=${row.version}&err=${row.run.stderr}&out=${row.run.stdout}`
+											`/report?filename=${row.filename}&lang=${row.language}&version=${row.version}&err=${row.run.stderr}&out=${row.run.stdout}&code=${row.content}&time=${row.time}`
 										);
 
 										window.open(uri, "_blank");
